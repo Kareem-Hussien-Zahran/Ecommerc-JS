@@ -1,0 +1,96 @@
+<!Doctype html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 style="margin:0 0;padding:20px;text-align:center;color:black;font-family:Arial, Helvetica, sans-serif">My store
+    </h1>
+    <header>
+
+        <input id="productName" type="text" placeholder="  Search by product">
+        <select id="category">
+            <option value="all" selected>All categories</option>
+            <option value="men">Men's closing</option>
+            <option value="electronic">Electronics</option>
+            <option value="clothes">women's clothing</option>
+        </select>
+
+        <input id="min" type="number" placeholder="  Min Price">
+        <input id="max" type="number" placeholder="  Max Price">
+        <select id="sortType">
+            <option value="no" selected>sort by</option>
+            <option value="name">sort by Name</option>
+            <option value="price">sort by price</option>
+            <option value="rate">sort by Rating</option>
+        </select>
+        <button onclick="filterProducts()">Apply Filter</button>
+        <br>
+        <br>
+
+    </header>
+
+    <section class="shopping_cart">
+        <h2 style="text-align:center">Shopping cart</h2>
+
+
+        <table width="50%" id="cart_products">
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Description</td>
+                <th>Price</th>
+
+                <th>Total price</th>
+                <th>Cancel order</th>
+                <th>Quantity</th>
+            </tr>
+
+        </table>
+
+    </section>
+    <div class="shopping_report">
+        <h5 id="noOfProducts">No.of products : </h5>
+        <h5 id="totalPrice">Total price : </h5>
+    </div>
+    <section class="products" id="products">
+
+    </section>
+
+
+
+    <div class="modal" id="view_product_modal">
+        <div class="modal_product" id="modal_product">
+        </div>
+    </div>
+
+    <div class="navigation" >
+        <button onclick="previous()">
+            <
+        </button>
+        <div class="currentTabs" id="currentTabs">
+            <button onclick="DisplayChunk(1)">
+                2
+            </button>
+
+            <button onclick="DisplayChunk(2)">
+                3
+            </button>
+
+        </div>
+
+                <button onclick="next()">
+                    >
+                </button>
+            </div>
+    </div>
+
+
+            <script src="action.js"></script>
+
+
+</body>
+
+</html>
